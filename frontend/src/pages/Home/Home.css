@@ -1,0 +1,157 @@
+.home-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.hero-cosmos-bg {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  position: relative;
+  background: #111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 3rem 2rem;
+  color: var(--color-white);
+  border-radius: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  user-select: none;
+}
+.hero-desc {
+  font-size: 1.35rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: var(--color-grey);
+  user-select: none;
+}
+.hero-note {
+  animation: hero-note-pulse 3s infinite alternate;
+  box-shadow: 0 0 16px 2px var(--color-accent, #ffeb3b);
+  border: 2px solid var(--color-accent, #ffeb3b);
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  background: #222;
+  border-radius: 1rem;
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  user-select: none;
+}
+
+@keyframes hero-note-pulse {
+  0% {
+    opacity: 0.3;
+    box-shadow: 0 0 8px 1px var(--color-accent, #ffeb3b);
+    border-color: var(--color-accent, #ffeb3b);
+    background: var(--color-bg);
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 32px 8px var(--color-accent, #ffeb3b);
+    border-color: var(--color-accent, #ffd700);
+    background: var(--color-bg-light, #fffbe6);
+  }
+  100% {
+    opacity: 0.3;
+    box-shadow: 0 0 8px 1px var(--color-accent, #ffeb3b);
+    border-color: var(--color-accent, #ffeb3b);
+    background: var(--color-bg);
+  }
+}
+.interactive-star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 8px 2px #fff;
+  pointer-events: none;
+  z-index: 2;
+}
+/* Ensure home-content grows to fill space above footer */
+.home-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* Make Home page use flex column layout for sticky footer */
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  color: var(--color-text);
+  user-select: none;
+}
+
+.cosmos-stars {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.interactive-star {
+  animation: interactive-star-float 2.5s linear forwards;
+}
+
+@keyframes interactive-star-float {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-40px) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.8);
+  }
+}
+
+/* Animated stars */
+.cosmos-stars::before,
+.cosmos-stars::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-repeat: repeat;
+  background-size: 4px 4px, 6px 6px, 8px 8px, 5px 5px;
+  opacity: 0.8;
+  animation: cosmos-stars 40s linear infinite;
+}
+.cosmos-stars::before {
+  background:
+    radial-gradient(circle at 70% 30%, #fff 1px, transparent 1px),
+    radial-gradient(circle at 20% 80%, #fff 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, #fff 2px, transparent 2px),
+    radial-gradient(circle at 80% 60%, #fff 1.5px, transparent 1.5px);
+}
+.cosmos-stars::after {
+  background:
+    radial-gradient(circle at 10% 10%, #fff 1px, transparent 1px),
+    radial-gradient(circle at 90% 90%, #fff 1px, transparent 1px),
+    radial-gradient(circle at 30% 70%, #fff 2px, transparent 2px),
+    radial-gradient(circle at 60% 80%, #fff 1.5px, transparent 1.5px);
+  opacity: 0.18;
+  animation-delay: 20s;
+}
+
+@keyframes cosmos-stars {
+  0% { background-position: 0 0, 0 0, 0 0, 0 0; }
+  100% { background-position: 200px 400px, 400px 200px, 300px 600px, 600px 300px; }
+}

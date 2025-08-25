@@ -1,0 +1,56 @@
+.apod-item-skeleton {
+  background: var(--color-bg-light);
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.apod-skeleton-img {
+  height: 220px;
+  width: 30%;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  animation: skeleton-loading 1.2s infinite linear;
+}
+
+.apod-skeleton-text {
+  height: 4rem;
+  width: 90%;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  animation: skeleton-loading 1.2s infinite linear;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+.skeleton-loader {
+  background-size: 400px 100%;
+  background-repeat: no-repeat;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200px 0;
+  }
+
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}

@@ -1,0 +1,20 @@
+/* Explorer page layout */
+.explorer-root {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+.explorer-main {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+@media (max-width: 1000px) {
+  .explorer-main {
+    flex-direction: column;
+  }
+}
+.explorer-section {
+  flex: 1;
+  padding: 1rem;
+}

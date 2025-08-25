@@ -1,0 +1,35 @@
+.apod-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  width: 95%;
+  position: relative;
+}
+
+.apod-scroll-top-btn {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 100;
+  background: var(--color-accent, #222);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.apod-scroll-top-btn:hover {
+  background: var(--color-accent-hover, #444);
+  transform: translateY(-4px) scale(1.08);
+}
+
+.apod-item {
+  flex: 1 1 400px;
+  min-width: 340px;
+  width: 100%;
+}

@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "start": "nodemon --watch src --ext ts --exec ts-node --ignore '*.test.ts' --delay 3 src/server.ts",
-    "prod:start": "node ./server.js",
+    "prod:start": "node ./dist/server.js",
     "compile": "tsc -p tsconfig.json",
     "eslint": "eslint",
     "lint": "npm run eslint -- \"src//*.ts\"",

@@ -1,6 +1,6 @@
 # NASA Data Explorer — Frontend
 
-This is the React + Vite frontend for NASA Data Explorer.
+This is the React + Vite frontend for NASA Data Explorer. Service available on [https://nasa-data-explorer-fe.vercel.app/](https://nasa-data-explorer-fe.vercel.app/)
 
 ## Features
 - Browse APOD, Mars Rover, Asteroids, and Earth imagery
